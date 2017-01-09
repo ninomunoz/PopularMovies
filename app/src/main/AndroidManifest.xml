@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.popular_movies">
+
+    <!-- These permissions are necessary for the application to perform network access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider android:name="com.example.popular_movies.data.FavoriteMovieProvider"
+            android:authorities="com.example.popular_movies">
+        </provider>
+
+        <activity android:name=".activity.MoviePosterActivity"
+            android:launchMode="singleTop"> <!-- Prevents target task from re-creating this activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.MovieDetailActivity"
+            android:parentActivityName=".activity.MoviePosterActivity">
+            <!-- Parent activity metadata to support < API 16 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.popular_movies.activity.MoviePosterActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
