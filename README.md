@@ -1,14 +1,5 @@
 # Popular Movies
-Udacity Nanodegree: Project 2
-
-
-## Overview:
-This application allows users to discover the most popular movies playing.
-Upon launch, the user is presented with a grid arrangement of movie posters. 
-Using the sort icon in the action bar, the user can choose to sort movies by
-popularity, rating or favorites. The user can tap on a movie poster to see 
-movie details. 
-
+Built an app, optimized for tablets, to help users discover popular and highly rated movies on the web. It displays a scrolling grid of movie trailers, launches a details screen whenever a particular movie is selected, allows users to save favorites, play trailers, and read user reviews. This app utilizes core Android user interface components and fetches movie information using themoviedb.org web API.
 
 ## API Key:
 An API key for themoviedb.org is required to compile and run this application.
